@@ -1,8 +1,9 @@
+@use "sass:color";
+$colors: "red", "green";
 
-
-  @mixin wavyText($c1, $c2) {
-    background-color: $c1;
-}
-
-h1, span {
-    @include wavyText(green, red) }
+@each $color in $colors {
+    .icon-#{$color} {
+      background-color: #{$color};
+      
+    }
+  }
